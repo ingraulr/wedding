@@ -1,0 +1,18 @@
+<h5><b>Comentarios</b></h5>
+<% @article.comments.each do |comment| %>
+<hr>
+<p>
+  <strong>Comentado por:</strong>
+    <%= comment.comment %>
+</p>
+<p>
+  <b>Comentario:</b>
+    <%= comment.body %>
+</p>
+<span>Creado el: <%= comment.created_at %></span>
+
+  <%= link_to '<button class="w3-btn w3-red w3-border w3-round w3-right w3-small" type="button">Eliminar Comentario</button>'.html_safe, [comment.article, comment], method: :delete, data: {confirm: "Estas seguro deseas elminar el comentario ??"}  %>
+  <br />
+  <% end %>
+
+</br>

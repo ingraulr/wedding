@@ -1,0 +1,15 @@
+<%= form_for([@article, @article.comments.build]) do |f| %>
+<p>
+  <h5><b><%= f.label :Autor %></b></h5>
+  <%= f.text_field(:body ,cols: 1, rows:2,class:'w3-input w3-border w3-round ')%>
+</p>
+<p>
+  <h5><b><%= f.label :Comentario %></b></h5>
+  <%= f.text_area(:body ,cols: 20, rows:2,class:'w3-input w3-border w3-round ')%>
+</p>
+<p>
+  <b>
+    <%= f.submit "Publicar comentario", class:'w3-btn  w3-green w3-border' %>
+  </b>
+  <% end %>
+</p>

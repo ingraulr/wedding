@@ -1,0 +1,92 @@
+
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white w3-center">
+<b>
+    <h1 class="w3-jumbo">Brenda & Raul</h1>
+    <h2>Nos casamos..</h2>
+    <h2><b>04.11.2017</b></h2>
+  </b>
+  </div>
+</header>
+
+
+
+<!-- About / Brenda & raul -->
+<div class="w3-container w3-padding-64 w3-pale-red " id="us">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-grey"><b>Brenda & Raul</b></h1>
+    <img class="w3-round w3-grayscale-min" src="http://i1378.photobucket.com/albums/ah93/ingraulreyes/3_zpscaaphckz.jpg" style="width:100%;margin:32px 0">
+    <p><i>You all know us. And we all know you. We are getting married.</i>
+    </p><br>
+    <p class="w3-center"><a href="#wedding" class="w3-button w3-black w3-round w3-padding-large w3-large">Detalles sobre la boda</a></p>
+  </div>
+</div>
+
+<!-- Background photo -->
+<div class="w3-display-container bgimg2">
+  <div class="w3-display-middle w3-text-white w3-center">
+    <h1 class="w3-jumbo">Estas invitado..! </h1><br>
+    <h2>Por supuesto..</h2>
+  </div>
+</div>
+
+<!-- Wedding information -->
+<div class="w3-container w3-padding-64 w3-pale-red  w3-center" id="wedding">
+  <div class="w3-content">
+    <h1 class="w3-text-grey"><b>La Boda</b></h1>
+    <img class="w3-round-large " src="http://www.nosotras.com/wp-content/uploads/2014/11/49a5f8ba8460ed04f146727ebdffe9b8.jpg" style="width:100%;margin:64px 0">
+    <div class="w3-row">
+      <div class="w3-half">
+        <h2>Cuando?</h2>
+        <p>Ceremonia Religiosa- 5:00pm</p>
+        <p>Boda Civil- 7:00pm</p>
+        <p>Recepcion y Cena - 8:00pm</p>
+      </div>
+      <div class="w3-half">
+        <h2>Donde?</h2>
+        <p>Parroquia de la Sagrada Familia - Col. Hidalgo</p>
+        <p>Jardin Vesalles - Calle uruguay Cuahutemoc sur</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- RSVP section -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="rsvp">
+  <hr>
+  <h1>Queremos saber que piensas? puedes dejarnos tus comentarios, ideas o lo que quieras en nuestro blog</h1>
+  <p class="w3-large">Entra a nuestro blog!!</p>
+  <p class="w3-xlarge">
+    <%= link_to '<button class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" type="button"><b>Blog de la boda</b></button>'.html_safe, blog_path%>
+  </p>
+  <hr>
+  <h1>ESPERAMOS CONTAR CON TU PRESENCIA!</h1>
+  <p class="w3-large">Porfavor confirmanos tu asisentica antes de: 1 de octubre 2017</p>
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">RSVP</button>
+
+  </p>
+</div>
+
+<!-- RSVP modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">NOS PODRAS ACOMPANAR?</h1>
+      <p>Nos encantaria que nos acompanaras ese dia tan especial.</p>
+      <form>
+        <input class="w3-input w3-border" type="text" placeholder="Name(s)" name="name">
+      </form>
+      <p><i>Sinceramente: Brenda & Raul</i></p>
+      <div class="w3-row">
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-green">Si, claro!! :) </button>
+        </div>
+        <div class="w3-half">
+          <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-red">No, podre :( </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

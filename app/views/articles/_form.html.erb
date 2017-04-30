@@ -1,0 +1,38 @@
+<% if @article.errors.any? %>
+<h4 class="w3-container w3-red w3-padding-small">
+  Los suiguientes errores impidieron que el articulo se salvara:</h4>
+<ul class="w3-red">
+  <% @article.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+<div class="w3-card-4 w3-margin w3-white w3-round">
+  <div class="w3-container">
+  </div>
+  <div class="w3-container">
+      <%= form_for @article do |f| %>
+      <p>
+        <%= f.label :Autor %></br>
+      <%= f.text_field(:commenter, class:'w3-input w3-border w3-round') %>
+    </p>
+      <p>
+        <%= f.label :Titulo %></br>
+      <%= f.text_field(:title, class:'w3-input w3-border w3-round') %>
+    </p>
+    <p>
+      <%= f.label :Mensaje%></br>
+    <%= f.text_area(:text,cols: 40, rows:10,class:'w3-input w3-border w3-round ')%>
+  </p>
+
+  <p>
+    <%= link_to '<button class="w3-button  w3-teal w3-border w3-round w3-right" type="button"><b>Listado de articulos</b></button>'.html_safe, articles_path %>
+
+      <b>
+        <%= f.submit "Publicar", class:'w3-button w3-padding-large w3-green w3-border' %>
+      </b>
+      <% end %>
+  </p>
+</div>
+</div>
+<hr>

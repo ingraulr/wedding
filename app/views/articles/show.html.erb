@@ -1,0 +1,75 @@
+<div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-container">
+    <p><%= link_to '<button class="w3-btn w3-small w3-blue w3-border w3-right" type="button"><b>Listado de articulos</b></button>'.html_safe, articles_path %></p>
+    <h3>
+      <b>Mostrar Articulo.</b>
+    </h3>
+    <%= link_to '<button class="w3-button w3-padding-large w3-green w3-border " type="button"><b>Crear Articulo</b></button>'.html_safe, new_article_path(@article)%>
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container w3-center">
+        creado por:
+        <h1>
+          <%= @article.commenter %>
+
+      </div>
+    </div>
+    <div class="w3-container w3-center"></div>
+    <div class="w3-card-4 w3-margin w3-white w3-round ">
+      <div class="w3-container ">
+        <b>
+          <h3>Titulo:
+          </h3>
+        </b>
+        <p><%= @article.title %></p>
+        <b>
+          <h3>Descripcion:</h3>
+        </b>
+        <p><%= @article.text %></p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <span class="w3-opacity">Creado:
+              <%= @article.created_at %></span>
+          </h5>
+          Ultima Actualizacion:
+          <%= @article.updated_at %></span>
+      </h5>
+
+      <%= link_to '<button class="w3-btn w3-blue w3-border  " type="button">Editar</button>'.html_safe, edit_article_path(@article)%>
+      <%= link_to '<button class="w3-btn  w3-red w3-border " type="button">Eliminar</button>'.html_safe, article_path(@article), method: :delete,
+              data: { confirm: "Estas seguro que deseas eliminar el articulo?"},
+              class: "btn"%>
+
+    </div>
+  </div>
+
+  <hr>
+  <hr>
+  <div class="w3-card-4 w3-margin w3-white w3-round w3-small">
+    <div class="w3-container w3-small">
+      <%= render 'comments/comment'%>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-card-4 w3-margin w3-white w3-round">
+    <div class="w3-container">
+      <%= render 'comments/form'%>
+    </div>
+  </div>
+  <h4>
+    <p>
+      <span class="w3-padding-large w3-right">
+        <b>comentarios
+        </b>
+        <span class="w3-tag ">
+          <%= @article.comments.count%>
+        </span>
+      </span>
+    </p>
+  </h4>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>

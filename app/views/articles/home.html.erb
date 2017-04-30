@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32">
+  <h1><b>NUESTRO BLOG</b></h1>
+  <p>Bienvenidos al blog de nuestra boda <span class="w3-tag">Brenda & Raul</span></p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="http://www.vintagesignprojects.com/robins%20egg%20blue%20wedding%20sign.jpg" alt="Nature" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Holaaaaaa!!</b></h3>
+      <h5>Bienvenidos a nuestro pequeno blog <span class="w3-opacity">Mayo 1, 20017</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Tu formas parte de nuestra historia y en especial de este dia tan importante para nosotros, queremos que este blog
+         sirva como medio de comunicacion entre nosotros y ustedes, por lo cual puedes dejar tu comentario en la seccion y sobre todo
+         explorar las otras secciones muchas gracias!!</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="https://shamithaandjasondotcom.files.wordpress.com/2011/05/cropped-ring-cushion-banner_lr1.jpg" alt="Norway" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Ultimo comentario registrado!!</b></h3>
+      <h5><%= @article.title%>, <span class="w3-opacity"><%= @article.created_at %></span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>
+        <%= @article.text %>
+      </p>.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+        </div>
+      </div>
+    </div>
+    <p>
+      <%= link_to '<button class="w3-button  w3-green w3-border w3-round w3-left" type="button"><b>Comentar</b></button>'.html_safe, new_article_path %>
+    </p>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card-2 w3-margin w3-margin-top">
+  <img src="http://i1378.photobucket.com/albums/ah93/ingraulreyes/3_zpscaaphckz.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>My Name</b></h4>
+      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+    </div>
+  </div><hr>
+
+  <!-- Posts -->
+  <div class="w3-card-2 w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Informacion importante</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="http://diocesisdemexicali.org/wp-content/uploads/2014/06/PARROQUIA_LA_SAGRADA_FAMILIA04-150x150.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ceremonia Religiosa</span><br>
+        <span>Misa: Parroquia de la Sagrada Familia</span>
+        <span> Av. 56 y Libertador- Col. Hidalgo sur- 21389 Mexicali, B.C.</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="http://i1378.photobucket.com/albums/ah93/ingraulreyes/civil_zpsrwm9buuo.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Boda civil </span><br>
+        <span>Jardin Versalles </span>
+        <span>Avenida República de Uruguay 51, Cuauhtémoc Sur, 21200 </span>
+        <span>7:00 PM</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="http://i1378.photobucket.com/albums/ah93/ingraulreyes/recepcion_zpsy9x0blqw.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Recepcion</span><br>
+        <span>Jardein versalles</span>
+        <span>8:00 PM</span>
+      </li>
+
+    </ul>
+  </div>
+  <hr>
+
+  <!-- musica -->
+  <div class="w3-card-2 w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Informacion importante</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="http://www.brandemia.org/wp-content/uploads/2013/04/2rgyj4m.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lista de reproduccion Spotify</span><br>
+        <span>Quieres escuchar nuesto play list!! da click aqui para ponerte al dia</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="http://www.la-razon.com/sociedad/Ciencia_tecnologia/Logo-Apple-Music-Foto-ajournalofmusicalthingscom_LRZIMA20150630_0091_11.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Listado caniones para el pary!! </span><br>
+        <span>Queremos que nos ayudes a ambientar nuestra fiesta!! </span><br>
+        <span>Por eso puede agregar tu cancion favorita y la pondemos en el repertorio musical</span><br>
+        <span>Da click aqui para agregar tu cancion</span>
+
+      </li>
+
+
+    </ul>
+  </div>
+  <hr>
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+
+</body>
+</html>
