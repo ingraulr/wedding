@@ -29,7 +29,7 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 
-  gem 'debugger'
+  gem 'byebug'
 
   gem 'web-console', '~> 2.0'
 
